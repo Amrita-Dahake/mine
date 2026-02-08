@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>A New Beginning</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background: linear-gradient(180deg, #fdf1f1, #ffffff);
+  color: #4a2b2b;
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 50px 20px;
+}
+
+h1 {
+  font-size: 2.4em;
+  margin-bottom: 10px;
+}
+
+.intro {
+  font-style: italic;
+  opacity: 0.85;
+  margin-bottom: 40px;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.9;
+  margin: 22px 0;
+}
+
+.photos {
+  margin: 45px 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.photos img {
+  width: 260px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.caption {
+  font-size: 0.9em;
+  font-style: italic;
+  opacity: 0.8;
+  margin-top: 8px;
+}
+
+.buttons {
+  margin-top: 50px;
+}
+
+button {
+  font-size: 1em;
+  padding: 14px 30px;
+  margin: 10px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.yes {
+  background-color: #e26d7d;
+  color: white;
+}
+
+.yes:hover {
+  background-color: #d45869;
+}
+
+.time {
+  background-color: #f3c6cd;
+  color: #4a2b2b;
+}
+
+footer {
+  margin-top: 60px;
+  font-size: 0.9em;
+  opacity: 0.6;
+}
+
+.heart {
+  position: fixed;
+  top: -10px;
+  font-size: 16px;
+  animation: fall 9s linear infinite;
+  opacity: 0.45;
+}
+
+@keyframes fall {
+  from { transform: translateY(0); }
+  to { transform: translateY(110vh); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>Om</h1>
+  <div class="intro">
+    Let’s imagine something — just for a moment.
+  </div>
+
+  <p>
+    Today is the first day we ever met.  
+    No past. No fights. No misunderstandings.  
+    Just you and me… and our eyes meet.
+  </p>
+
+  <p>
+    We don’t know each other yet.  
+    There’s no fear here — only a quiet feeling  
+    that says this matters.
+  </p>
+
+  <div class="photos">
+    <!-- Replace these image names -->
+    <div>
+      <img src="him.jpg" alt="You">
+      <div class="caption">The first person I noticed</div>
+    </div>
+    <div>
+      <img src="us.jpg" alt="Us">
+      <div class="caption">The moment it felt right</div>
+    </div>
+  </div>
+
+  <p>
+    Before this new beginning, I want to say one thing honestly.  
+    I know I hurt you, and I take responsibility for that.
+  </p>
+
+  <p>
+    This new start isn’t to erase the past —  
+    it’s to grow beyond it.
+  </p>
+
+  <p>
+    From here, we move slowly.  
+    We listen. We understand. We learn.
+  </p>
+
+  <p>
+    We’ll go on dates like it’s our first.  
+    And with time, we’ll build something new —  
+    something healthier.
+  </p>
+
+  <p><strong>
+    Will you let me meet you again —  
+    and begin from scratch?
+  </strong></p>
+
+  <div class="buttons">
+    <button class="yes" onclick="yesClicked()">
+      Yes, let’s begin again
+    </button>
+    <button class="time">
+      I need time
+    </button>
+  </div>
+
+  <footer>
+    No pressure. Just honesty.
+  </footer>
+</div>
+
+<script>
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerHTML = "🤍";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.animationDuration = (7 + Math.random() * 3) + "s";
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), 10000);
+}
+setInterval(createHeart, 900);
+
+function yesClicked() {
+  alert("Thank you for choosing a new beginning 🤍");
+}
+</script>
+
+</body>
+</html>
